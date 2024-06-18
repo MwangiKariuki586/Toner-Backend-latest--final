@@ -31,7 +31,7 @@ class TonerRequestsView(generics.ListCreateAPIView):
         if serializer.is_valid():
             # Check if the user is an admin
             user = request.user
-            if user.is_superuser:
+            if user.is_staff:
                 # If the user is an admin, skip saving their data
                 serializer.save()
                 return Response({

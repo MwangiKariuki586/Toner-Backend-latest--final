@@ -17,8 +17,8 @@ def notify_low_toner(sender ,instance,created ,**kwargs):
     if instance.quantity <= 3:
         subject = 'Toner Stock Update'
         message = f'Hello, the stock for "{instance.Toner_name}" toner is running low, with only {instance.quantity} left. Kindly replenish.'
-        email_from = 'aleqohmwas@gmail.com'
-        recipient_list = ['mwangialex268@gmail.com']
+        email_from = 'rexdraymond@gmail.com'
+        recipient_list = ['mwangialex268@gmail.com','mwangikariuki568']
         try:
             # Send email
             send_mail(subject, message, email_from, recipient_list, fail_silently=False)
